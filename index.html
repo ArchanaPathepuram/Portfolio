@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archana Pathepuram | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="archana.jpg" alt="Archana Pathepuram">
+    <h1 id="typed-text">Archana Pathepuram</h1>
+    <p>Computer Science Student | Passionate Learner</p>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2><i class="fas fa-user"></i> Summary</h2>
+      <p>Motivated and detail-oriented B.Tech student with hands-on project experience and a strong foundation in networking. Proficient in HTML, CSS, C, Python, and Java. Demonstrates problem-solving abilities, adaptability, and a passion for continuous learning. Eager to contribute and grow in a dynamic and collaborative environment.</p>
+    </section>
+
+    <section>
+      <h2><i class="fas fa-explore"></i> Explore</h2>
+      <div class="tabs">
+        <div class="tab active" onclick="showTab('skills')">
+          <i class="fas fa-code"></i> Skills
+        </div>
+        <div class="tab" onclick="showTab('projects')">
+          <i class="fas fa-project-diagram"></i> Projects
+        </div>
+        <div class="tab" onclick="showTab('certs')">
+          <i class="fas fa-certificate"></i> Certifications
+        </div>
+      </div>
+      <div id="skills" class="tab-content active">
+        <ul>
+          <li><strong>Languages:</strong> C, Python, Java</li>
+          <li><strong>Databases:</strong> MySQL, MongoDB</li>
+          <li><strong>Soft Skills:</strong> Communication, Teamwork, Problem-Solving, Time Management</li>
+        </ul>
+      </div>
+      <div id="projects" class="tab-content">
+        <div class="project-card">
+          <h3><i class="fas fa-robot"></i> AI-Based FAQ Chatbot</h3>
+          <p>Built using NLP for handling FAQs with voice support.</p>
+          <a href="https://github.com/22R01A0547/AI-Based-Faq-Chatbot-With-Voice-_Assistance.git" target="_blank">
+            <i class="fab fa-github"></i> View Project
+          </a>
+        </div>
+        <div class="project-card">
+          <h3><i class="fas fa-bus"></i> Bus Pass Management System</h3>
+          <p>Designed a digital platform to generate/manage student bus passes.</p>
+          <a href="https://github.com/22R01A0547/Bus-Pass-Management-System.git" target="_blank">
+            <i class="fab fa-github"></i> View Project
+          </a>
+        </div>
+      </div>
+      <div id="certs" class="tab-content">
+        <ul>
+          <li><strong>Python</strong> – Infosys Springboard 
+            <a href="https://drive.google.com/file/d/1thEALowEJutkdG6s3nz84dPP_7WDQ4Fa/view" target="_blank">
+              <i class="fas fa-external-link-alt"></i> View
+            </a>
+          </li>
+          <li><strong>AWS Cloud Foundations</strong> – AICTE 
+            <a href="https://drive.google.com/file/d/17P6lI8AMnvzB9tckfAI8BtKnV_Bma4N7/view" target="_blank">
+              <i class="fas fa-external-link-alt"></i> View
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="links">
+      <h2><i class="fas fa-handshake"></i> Let's Connect</h2>
+      <a href="mailto:archanapathepuram9@gmail.com">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+      <a href="https://www.linkedin.com/in/archana-pathepuram">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/22R01A0547">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Archana Pathepuram — All rights reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
