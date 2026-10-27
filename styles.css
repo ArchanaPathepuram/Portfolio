@@ -162,3 +162,17 @@ opacity: 1 !important;
 visibility: visible !important;
 }
 }
+@media (max-width: 700px) {
+.hero-visual.reveal,
+.hero-visual.reveal.is-visible {
+opacity: 1 !important;
+visibility: visible !important;
+transform: none !important;
+}
+
+.hero-visual .portrait-frame,
+.hero-visual .portrait-frame img {
+opacity: 1 !important;
+visibility: visible !important;
+}
+}
