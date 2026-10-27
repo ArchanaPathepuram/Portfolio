@@ -149,3 +149,16 @@ height: 100% !important;
 object-fit: cover;
 }
 }
+@media (max-width: 768px) {
+.hero-visual.reveal {
+opacity: 1 !important;
+visibility: visible !important;
+transform: none !important;
+}
+
+.hero-visual.reveal .portrait-frame,
+.hero-visual.reveal .portrait-frame img {
+opacity: 1 !important;
+visibility: visible !important;
+}
+}
