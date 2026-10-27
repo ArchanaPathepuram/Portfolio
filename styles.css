@@ -176,3 +176,9 @@ opacity: 1 !important;
 visibility: visible !important;
 }
 }
+
+
+/* Profile photo visibility fix */
+.portrait-frame{overflow:hidden;position:relative}
+.portrait-frame img{display:block!important;visibility:visible!important;opacity:1!important;width:100%!important;height:100%!important;object-fit:cover;object-position:center 22%}
+@media(max-width:768px){.hero-visual,.hero-visual.reveal{display:grid!important;visibility:visible!important;opacity:1!important;transform:none!important;min-height:330px!important;height:auto!important}.portrait-frame{display:block!important;visibility:visible!important;opacity:1!important;width:min(82%,300px)!important;height:355px!important}.portrait-frame img{display:block!important;visibility:visible!important;opacity:1!important}}
