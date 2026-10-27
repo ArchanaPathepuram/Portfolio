@@ -121,3 +121,31 @@ body{background:#050505!important;color:#f5f5f7!important}body::before{backgroun
     transform: none !important;
   }
 }
+@media screen and (max-width: 768px) {
+.hero-visual {
+display: grid !important;
+visibility: visible !important;
+opacity: 1 !important;
+transform: none !important;
+min-height: 380px !important;
+width: 100% !important;
+}
+
+.portrait-frame {
+display: block !important;
+visibility: visible !important;
+opacity: 1 !important;
+width: min(76%, 330px) !important;
+height: 380px !important;
+overflow: hidden;
+}
+
+.portrait-frame img {
+display: block !important;
+visibility: visible !important;
+opacity: 1 !important;
+width: 100% !important;
+height: 100% !important;
+object-fit: cover;
+}
+}
