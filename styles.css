@@ -1157,22 +1157,25 @@ nav {
   .reveal { opacity: 1; transform: none; }
 }
 
-/* Animated portrait box */
+
+/* Square profile picture with animated border */
 .hero-visual {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  isolation: isolate;
+  display: grid;
+  place-items: center;
+  min-height: 430px;
 }
 
 .portrait-frame {
   position: relative;
-  width: min(340px, 78vw);
-  aspect-ratio: 4 / 5;
-  padding: 6px;
-  border-radius: 28px;
+  z-index: 1;
+  width: 300px;
+  height: 300px;
+  aspect-ratio: auto;
+  padding: 5px;
   overflow: hidden;
+  border: none;
+  border-radius: 10px;
   background: linear-gradient(
     135deg,
     #a855f7,
@@ -1181,22 +1184,17 @@ nav {
     #a855f7
   );
   background-size: 300% 300%;
-  animation: borderFlow 6s ease infinite, floatPhoto 4s ease-in-out infinite;
-  box-shadow:
-    0 0 25px rgba(168, 85, 247, 0.25),
-    0 0 55px rgba(34, 211, 238, 0.12);
-  z-index: 1;
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.35);
+  animation: borderFlow 5s ease infinite, floatPhoto 4s ease-in-out infinite;
 }
 
 .portrait-frame img {
   display: block;
   width: 100%;
   height: 100%;
-  aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center top;
-  border-radius: 23px;
-  background: #0b0718;
+  object-position: center;
+  border-radius: 6px;
 }
 
 .portrait-glow {
@@ -1204,16 +1202,10 @@ nav {
   width: 280px;
   height: 280px;
   border-radius: 50%;
-  background: conic-gradient(
-    #a855f7,
-    #22d3ee,
-    #ec4899,
-    #a855f7
-  );
+  background: conic-gradient(#a855f7, #22d3ee, #ec4899, #a855f7);
   filter: blur(65px);
   opacity: 0.35;
   animation: glowPulse 5s ease-in-out infinite alternate;
-  z-index: -1;
 }
 
 @keyframes borderFlow {
@@ -1232,47 +1224,12 @@ nav {
   to { transform: scale(1.12); opacity: 0.45; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .portrait-frame,
-  .portrait-glow {
-    animation: none;
+/* Mobile */
+@media (max-width: 700px) {
+  .hero-visual {
+    min-height: 350px;
   }
-}
-/* Square profile picture with animation */
-.portrait-frame {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  padding: 5px;
-  border-radius: 12px;
-  overflow: hidden;
 
-  background: linear-gradient(
-    135deg,
-    #a855f7,
-    #22d3ee,
-    #ec4899,
-    #a855f7
-  );
-  background-size: 300% 300%;
-
-  animation: borderFlow 5s ease infinite,
-             floatPhoto 4s ease-in-out infinite;
-
-  box-shadow: 0 0 30px rgba(168, 85, 247, 0.35);
-}
-
-.portrait-frame img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 8px;
-}
-
-/* Mobile responsive */
-@media (max-width: 480px) {
   .portrait-frame {
     width: 250px;
     height: 250px;
