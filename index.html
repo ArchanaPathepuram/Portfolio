@@ -1,245 +1,210 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#090b18">
-  <meta name="description" content="Archana Pathepuram — CSE graduate interested in AI, Machine Learning, Data Science and Generative AI.">
-  <title>Archana Pathepuram | AI/ML Portfolio</title>
-
+  <meta name="theme-color" content="#0b0718">
+  <meta name="description" content="Pathepuram Archana — Computer Science graduate exploring AI/ML, Data Science, NLP and Generative AI.">
+  <title>Pathepuram Archana | AI/ML Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <div class="background-glow glow-one"></div>
-  <div class="background-glow glow-two"></div>
 
-  <nav class="navbar">
-    <a class="logo" href="#home">AP<span>.</span></a>
-
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-
-    <div class="nav-links" id="navLinks">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#contact" class="nav-contact">Contact ↗</a>
-    </div>
+<header class="site-header">
+  <a class="brand" href="#home"><span class="brand-icon">A<span></span></span><span>archana<span class="brand-period">.</span></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
+  <nav id="navMenu">
+    <a class="nav-link active" href="#home">Home</a>
+    <a class="nav-link" href="#about">About</a>
+    <a class="nav-link" href="#skills">Skills</a>
+    <a class="nav-link" href="#projects">Projects</a>
+    <a class="nav-link" href="#certifications">Certifications</a>
+    <a class="nav-link" href="#contact">Contact</a>
+    <a class="nav-resume" href="#contact">Let's connect</a>
   </nav>
+</header>
 
-  <main>
-    <section class="hero section-wrap" id="home">
-      <div class="hero-content reveal">
-        <div class="availability"><span class="status-dot"></span> Open to opportunities</div>
-
-        <p class="eyebrow">HELLO, I'M</p>
-        <h1>Archana<br><span class="gradient-text">Pathepuram.</span></h1>
-
-        <h2 class="hero-role">CSE Graduate <span class="role-divider">/</span> AI &amp; ML Enthusiast</h2>
-
-        <p class="hero-description">
-          I enjoy working with Python, machine learning and data to build practical projects
-          that solve real-world problems. I'm currently looking for opportunities to learn,
-          contribute and grow in AI/ML and data-focused roles.
-        </p>
-
-        <div class="hero-actions">
-          <a class="button button-primary" href="#projects">Explore my work <span>↗</span></a>
-          <a class="button button-outline" href="#contact">Get in touch</a>
-        </div>
-
-        <div class="social-links">
-          <a href="https://github.com/ArchanaPathepuram" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-          <a href="https://www.linkedin.com/in/archana-pathepuram/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-        </div>
+<main>
+  <!-- HERO -->
+  <section class="hero section-wrap" id="home">
+    <div class="hero-copy reveal">
+      <div class="eyebrow"><span class="pulse-dot"></span> COMPUTER SCIENCE · AI/ML · DATA SCIENCE</div>
+      <p class="hero-kicker">Hello, world! I'm</p>
+      <h1>Pathepuram<br><span class="gradient-text">Archana.</span></h1>
+      <div class="role-line">
+        <span class="role-prefix">I’m exploring</span>
+        <span class="typed-role" id="typedRole">Artificial Intelligence</span>
+        <span class="typing-cursor">|</span>
       </div>
-
-      <div class="hero-visual reveal">
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
-        <div class="photo-card">
-          <div class="photo-topline"><span>PORTFOLIO / 2026</span><span>✳</span></div>
-          <img src="archana.jpg" alt="Archana Pathepuram" class="profile-photo">
-          <div class="photo-caption">
-            <div><strong>Archana Pathepuram</strong><span>Computer Science Graduate</span></div>
-            <span class="photo-star">✦</span>
-          </div>
-        </div>
-        <div class="floating-tag tag-ai">✳ AI / ML</div>
-        <div class="floating-tag tag-python">⌘ Python</div>
+      <p class="hero-description">A Computer Science and Engineering graduate who enjoys turning data, language, and ideas into practical AI-powered applications.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#projects">Explore my projects <span>↘</span></a>
+        <a class="button button-secondary" href="#about">Get to know me</a>
       </div>
+      <div class="hero-socials">
+        <a href="https://github.com/ArchanaPathepuram" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+        <a href="https://www.linkedin.com/in/archana-pathepuram/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="mailto:archanapathepuram9@gmail.com" aria-label="Email">✉</a>
+      </div>
+      <div class="hero-location"><span class="location-line"></span> CMR Institute of Technology <span class="location-divider">/</span> CSE Graduate</div>
+    </div>
+    <div class="hero-visual reveal reveal-delay">
+      <div class="portrait-glow"></div>
+      <div class="portrait-frame"><img src="archana.jpg" alt="Pathepuram Archana"></div>
+      <div class="floating-tag tag-one">AI / ML</div>
+      <div class="floating-tag tag-two">Always learning ✦</div>
+    </div>
+  </section>
 
-      <a class="scroll-hint" href="#about"><span></span> SCROLL TO EXPLORE</a>
-    </section>
-
-    <section class="section-wrap section-block" id="about">
+  <!-- ABOUT -->
+  <section class="section-wrap section-block about-section" id="about">
+    <div class="section-label reveal"><span>01</span> / ABOUT ME</div>
+    <div class="about-layout">
       <div class="section-heading reveal">
-        <p class="eyebrow">A LITTLE ABOUT ME</p>
-        <h2>Curious by nature.<br><span class="gradient-text">Practical by learning.</span></h2>
+        <h2>Curious mind.<br><span class="gradient-text">Builder mindset.</span></h2>
       </div>
-
-      <div class="about-layout">
-        <div class="about-copy reveal">
-          <p>
-            I'm a Computer Science graduate from CMR Institute of Technology, Hyderabad,
-            interested in Artificial Intelligence, Machine Learning, Data Science and
-            Generative AI.
-          </p>
-          <p>
-            Through academic and personal projects, I've worked on data preprocessing,
-            exploratory data analysis, model development and evaluation. I like learning
-            by building, testing different approaches and improving my work step by step.
-          </p>
-          <p>
-            I'm looking for an opportunity where I can apply my skills, learn from a team
-            and contribute to useful technology.
-          </p>
-        </div>
-
-        <div class="about-facts reveal">
-          <div class="fact-card"><span class="fact-number">01</span><div><strong>Machine Learning</strong><p>Training and evaluating models</p></div></div>
-          <div class="fact-card"><span class="fact-number">02</span><div><strong>Data Analysis</strong><p>Exploring data and finding patterns</p></div></div>
-          <div class="fact-card"><span class="fact-number">03</span><div><strong>AI Projects</strong><p>Building and improving applications</p></div></div>
+      <div class="about-copy reveal reveal-delay">
+        <p class="about-lead">I’m Pathepuram Archana, a recent Computer Science and Engineering graduate from CMR Institute of Technology.</p>
+        <p>I’m interested in machine learning, deep learning, natural language processing, and Generative AI. Through projects, I’ve explored classification, text-based prediction, resume analysis, health-risk prediction, and market-data analysis.</p>
+        <p>I enjoy learning new tools and connecting model development with usable applications through APIs and lightweight deployment platforms.</p>
+        <div class="about-pill-row">
+          <span>Problem solving</span><span>Continuous learning</span><span>AI applications</span><span>Model deployment basics</span>
         </div>
       </div>
-    </section>
+    </div>
+    <div class="education-card reveal">
+      <div class="education-icon">⌘</div>
+      <div><small>EDUCATION</small><strong>B.Tech — Computer Science and Engineering</strong><span>CMR Institute of Technology · 2026</span><span>CGPA: 8.07</span></div>
+      <div class="education-mark">CSE</div>
+    </div>
+  </section>
 
-    <section class="section-wrap section-block" id="skills">
-      <div class="section-heading reveal">
-        <p class="eyebrow">WHAT I WORK WITH</p>
-        <h2>Skills &amp; <span class="gradient-text">Tools.</span></h2>
-        <p class="section-intro">Technologies I've used in coursework, practice and projects.</p>
+  <!-- SKILLS -->
+  <section class="section-wrap section-block skills-section" id="skills">
+    <div class="section-heading-row">
+      <div class="section-heading">
+        <div class="section-label"><span>02</span> / TECH STACK</div>
+        <h2>Tools I work <span class="gradient-text">with.</span></h2>
       </div>
+      <p class="heading-note">A snapshot of my programming, data, AI and deployment toolkit.</p>
+    </div>
+    <div class="stack-groups">
+      <article class="stack-group">
+        <div class="stack-group-head"><span class="stack-symbol">⌘</span><div><h3>Programming Languages</h3><p>Core languages and web foundations</p></div></div>
+        <div class="stack-chips"><span class="stack-chip"><b>Py</b> Python</span><span class="stack-chip"><b>Ja</b> Java</span><span class="stack-chip"><b>C</b> C</span><span class="stack-chip"><b>SQL</b> SQL</span><span class="stack-chip"><b>HTML</b> HTML</span><span class="stack-chip"><b>CSS</b> CSS</span></div>
+      </article>
+      <article class="stack-group">
+        <div class="stack-group-head"><span class="stack-symbol stack-cyan">▥</span><div><h3>Data Science & Analytics</h3><p>Working with data and visualisation</p></div></div>
+        <div class="stack-chips"><span class="stack-chip"><b>np</b> NumPy</span><span class="stack-chip"><b>pd</b> Pandas</span><span class="stack-chip"><b>plt</b> Matplotlib</span><span class="stack-chip"><b>sk</b> Scikit-learn</span><span class="stack-chip"><b>BI</b> Power BI basics</span></div>
+      </article>
+      <article class="stack-group">
+        <div class="stack-group-head"><span class="stack-symbol stack-pink">✳</span><div><h3>Machine Learning & AI</h3><p>Models, neural networks and language tasks</p></div></div>
+        <div class="stack-chips"><span class="stack-chip"><b>ML</b> Machine Learning</span><span class="stack-chip"><b>DL</b> Deep Learning</span><span class="stack-chip"><b>PT</b> PyTorch</span><span class="stack-chip"><b>CNN</b> CNN</span><span class="stack-chip"><b>RNN</b> RNN</span><span class="stack-chip"><b>NLP</b> NLP</span><span class="stack-chip"><b>CV</b> OpenCV</span></div>
+      </article>
+      <article class="stack-group">
+        <div class="stack-group-head"><span class="stack-symbol">⌁</span><div><h3>Apps & Deployment</h3><p>Building practical applications</p></div></div>
+        <div class="stack-chips"><span class="stack-chip"><b>API</b> REST APIs</span><span class="stack-chip"><b>FA</b> FastAPI</span><span class="stack-chip"><b>FL</b> Flask</span><span class="stack-chip"><b>ST</b> Streamlit</span><span class="stack-chip"><b>R</b> Render</span></div>
+      </article>
+      <article class="stack-group stack-group-wide">
+        <div class="stack-group-head"><span class="stack-symbol stack-cyan">✧</span><div><h3>Generative AI</h3><p>Concepts and techniques I am learning</p></div></div>
+        <div class="stack-chips"><span class="stack-chip"><b>AI</b> Generative AI</span><span class="stack-chip"><b>LLM</b> Large Language Models</span><span class="stack-chip"><b>RAG</b> RAG concepts</span></div>
+      </article>
+    </div>
+  </section>
 
-      <div class="skills-grid">
-        <article class="skill-card reveal">
-          <div class="skill-icon">Py</div>
-          <h3>Programming</h3>
-          <div class="skill-tags"><span>Python</span><span>SQL</span></div>
-        </article>
+  <!-- PROJECTS -->
+  <section class="section-wrap section-block projects-section" id="projects">
+    <div class="section-label reveal"><span>03</span> / SELECTED WORK</div>
+    <div class="section-heading section-heading-row reveal">
+      <h2>Projects with purpose<span class="gradient-text">.</span></h2>
+      <p class="heading-note">Experiments across AI, language, health, and data.</p>
+    </div>
+    <div class="project-filters reveal" role="group" aria-label="Filter projects">
+      <button class="filter-button active" data-filter="all">All projects</button>
+      <button class="filter-button" data-filter="ml">Machine Learning</button>
+      <button class="filter-button" data-filter="nlp">NLP & Deep Learning</button>
+      <button class="filter-button" data-filter="genai">AI Applications</button>
+      <button class="filter-button" data-filter="data">Data Science</button>
+    </div>
+    <div class="projects-grid">
+      <article class="project-card reveal" data-category="ml">
+        <div class="project-art art-animal"><span class="art-label">COMPUTER VISION</span><div class="project-visual-icon">◉</div><span class="art-code">IMAGE → CLASS</span><div class="art-grid"></div></div>
+        <div class="project-body"><div class="project-type">01 / MACHINE LEARNING</div><h3>Automated Animal Species Classification</h3><p>An image-classification project exploring how machine learning can identify animal species from image inputs.</p><div class="tag-row"><span>Python</span><span>Machine Learning</span><span>Classification</span></div><a class="project-link" href="https://github.com/ArchanaPathepuram/Animal_Classification_Machine_Learning" target="_blank" rel="noopener">View repository ↗</a></div>
+      </article>
+      <article class="project-card reveal" data-category="nlp">
+        <div class="project-art art-stress"><span class="art-label">NATURAL LANGUAGE PROCESSING</span><div class="waveform"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="art-code">TEXT → INSIGHT</span></div>
+        <div class="project-body"><div class="project-type">02 / NLP & DEEP LEARNING</div><h3>Semantic Stress Detection</h3><p>A text-based stress detection project using NLP preprocessing and a Bidirectional LSTM model to learn patterns in language.</p><div class="tag-row"><span>NLP</span><span>BiLSTM</span><span>GloVe</span></div><a class="project-link" href="https://github.com/ArchanaPathepuram/NLP_Based_Stress_Detection" target="_blank" rel="noopener">View repository ↗</a></div>
+      </article>
+      <article class="project-card reveal" data-category="genai">
+        <div class="project-art art-resume"><span class="art-label">AI-POWERED TOOL</span><div class="resume-graphic"><div></div><div></div><div></div><b>CV</b></div><span class="art-code">RESUME → INSIGHTS</span></div>
+        <div class="project-body"><div class="project-type">03 / AI APPLICATION</div><h3>AI Resume Analyzer</h3><p>An AI-focused resume analysis project intended to help review resume content against a target role.</p><div class="tag-row"><span>Python</span><span>AI</span><span>Resume analysis</span></div><a class="project-link" href="https://github.com/ArchanaPathepuram/AI_Resume_Analyser" target="_blank" rel="noopener">View repository ↗</a></div>
+      </article>
+      <article class="project-card reveal" data-category="ml">
+        <div class="project-art art-heart"><span class="art-label">PREDICTIVE MODELLING</span><div class="heart-line">♡<span>⌁⌁⌁</span></div><span class="art-code">INPUTS → RISK ESTIMATE</span></div>
+        <div class="project-body"><div class="project-type">04 / MACHINE LEARNING</div><h3>Heart Disease Prediction</h3><p>A machine learning application that uses input features to estimate a heart-disease risk class.</p><div class="tag-row"><span>Python</span><span>Machine Learning</span><span>Streamlit</span></div><a class="project-link" href="https://github.com/ArchanaPathepuram/Heart_Disease" target="_blank" rel="noopener">View repository ↗</a></div>
+      </article>
+      <article class="project-card reveal" data-category="data">
+        <div class="project-art art-stock"><span class="art-label">MARKET DATA & MODELLING</span><svg viewBox="0 0 320 110" role="img" aria-label="Decorative data trend"><polyline points="0,85 32,70 58,78 86,45 112,58 142,30 168,42 195,18 222,35 251,12 280,26 320,3" fill="none" stroke="currentColor" stroke-width="3"/><polyline points="0,103 320,103" fill="none" stroke="currentColor" stroke-opacity=".25"/></svg><span class="art-code">DATA → ANALYSIS</span></div>
+        <div class="project-body"><div class="project-type">05 / DATA SCIENCE</div><h3>Hybrid AI Stock Market Analysis</h3><p>A market-analysis project exploring a hybrid QINN and Transformer-based approach to financial data.</p><div class="tag-row"><span>Python</span><span>QINN</span><span>Transformer</span></div><a class="project-link" href="https://github.com/ArchanaPathepuram?tab=repositories" target="_blank" rel="noopener">Browse repositories ↗</a></div>
+      </article>
+    </div>
+    <p class="project-note">The stock market project link opens your GitHub repositories, where the project can be selected.</p>
+  </section>
 
-        <article class="skill-card reveal">
-          <div class="skill-icon">ML</div>
-          <h3>Machine Learning</h3>
-          <div class="skill-tags"><span>Scikit-learn</span><span>Classification</span><span>Regression</span><span>Decision Trees</span><span>Random Forest</span></div>
-        </article>
+  <!-- CERTIFICATIONS: ALL 9 LINKS -->
+  <section class="section-wrap section-block cert-section" id="certifications">
+    <div class="section-label reveal"><span>04</span> / LEARNING & CREDENTIALS</div>
+    <div class="section-heading section-heading-row reveal"><h2>Learning never stops<span class="gradient-text">.</span></h2><p class="heading-note">Certifications, courses, and events that have supported my learning journey.</p></div>
+    <div class="cert-grid">
+      <article class="cert-card reveal"><span class="cert-logo logo-blue">AI</span><div><small>ARTIFICIAL INTELLIGENCE</small><h3>AI/ML Certification</h3><p>AICTE</p></div><a class="cert-arrow" href="https://drive.google.com/file/d/1w51EjLWN0SQQ8KLwOs-18k1z6FPewUqy/view?usp=drive_link" aria-label="Open AI/ML certificate" target="_blank" rel="noopener noreferrer">↗</a></article>
+      <article class="cert-card reveal"><span class="cert-logo logo-green">DRF</span><div><small>COURSE COMPLETION</small><h3>Artificial Intelligence & Machine Learning</h3><p>Dr. Reddy’s Foundation</p></div><a class="cert-arrow" href="https://drive.google.com/file/d/1PE_Kof74RLl9BwVYPXdr-UUj-ke2nDpt/view?usp=drive_link" aria-label="Open AI and ML certificate" target="_blank" rel="noopener noreferrer">↗</a></article>
+      <article class="cert-card reveal"><span class="cert-logo logo-purple">Py</span><div><small>INTERNSHIP</small><h3>Python Internship</h3><p>ECode Learning Software Services</p></div><a class="cert-arrow" href="https://drive.google.com/file/d/10yAjoEgwF-LTZrwYu5_s0rgJdFlm4pSC/view?usp=drive_link" aria-label="Open Python internship certificate" target="_blank" rel="noopener noreferrer">↗</a></article>
+      <article class="cert-card reveal"><span class="cert-logo logo-cyan">DA</span><div><small>DATA ANALYTICS</small><h3>Data Analytics</h3><p>Cisco</p></div><a class="cert-arrow" href="https://drive.google.com/file/d/1wzILqWHiruxvVj0Pyu-PZJwhC7ZFK1Yh/view?usp=drive_link" aria-label="Open Data Analytics certificate" target="_blank" rel="noopener noreferrer">↗</a></article>
+      <article class="cert-card reveal"><span class="cert-logo logo-blue">Py</span><div><small>PYTHON ESSENTIALS</small><h3>Python Essentials 1 & 2</h3><p>Cisco Networking Academy</p></div><a class="cert-arrow" href="https://drive.google.com/file/d/1anI5bDqzDzvzhvyhZwtpGnXGX-6iLEjf/view?usp=drive_link" aria-label="Open Python Essentials certificates" target="_blank" rel="noopener noreferrer">↗</a></article>
+      <article class="cert-card reveal"><span class="cert-logo logo-pink">Now</span><div><small>MICRO-CERTIFICATION</small><h3>ServiceNow Micro-Certification</h3><p>ServiceNow</p></div><a class="cert-arrow" href="https://drive.google.com/file/d/1eGwOnO1Yb3YLRSFRXOInaoAnWPJYe_4k/view?usp=drive_link" aria-label="Open ServiceNow certificate" target="_blank" rel="noopener noreferrer">↗</a></article>
+      <article class="cert-card reveal"><span class="cert-logo logo-orange">IS</span><div><small>PYTHON FUNDAMENTALS</small><h3>Basics of Python</h3><p>Infosys Springboard</p></div><a class="cert-arrow" href="https://drive.google.com/file/d/1HQ5zvusHOZomuDDtILEkTKCdUP3YXI_8/view?usp=drive_link" aria-label="Open Infosys Python certificate" target="_blank" rel="noopener noreferrer">↗</a></article>
+    </div>
+    <div class="section-heading extra-learning-heading"><h2>Hackathons & Workshops<span class="gradient-text">.</span></h2><p class="heading-note">Hands-on events and technical learning experiences.</p></div>
+    <div class="cert-grid extra-learning-grid">
+      <article class="cert-card reveal"><span class="cert-logo logo-purple">✦</span><div><small>HACKATHON / EVENT</small><h3>Adobe Hackathon</h3><p>TechOrq</p></div><a class="cert-arrow" href="https://drive.google.com/file/d/1KsvMOZ_BX3nV3DI--ambf3wqMegzFbaf/view?usp=drive_link" aria-label="Open Adobe Hackathon certificate" target="_blank" rel="noopener noreferrer">↗</a></article>
+      <article class="cert-card reveal"><span class="cert-logo logo-green">Lab</span><div><small>TECHNICAL WORKSHOP</small><h3>Innomatics Research Workshop</h3><p>Innomatics Research Lab</p></div><a class="cert-arrow" href="https://drive.google.com/file/d/18btFyimSn2L5EFlflL9aYnGushU0F34n/view?usp=drive_link" aria-label="Open Innomatics workshop certificate" target="_blank" rel="noopener noreferrer">↗</a></article>
+    </div>
+  </section>
 
-        <article class="skill-card reveal">
-          <div class="skill-icon">AI</div>
-          <h3>Deep Learning &amp; NLP</h3>
-          <div class="skill-tags"><span>TensorFlow</span><span>PyTorch</span><span>CNN</span><span>RNN / LSTM</span><span>NLTK</span></div>
-        </article>
+  <!-- NEXT -->
+  <section class="section-wrap section-block next-section">
+    <div class="next-card reveal">
+      <div class="next-orb"></div><div class="section-label"><span>05</span> / WHAT'S NEXT</div>
+      <h2>Building skills into<br><span class="gradient-text">real-world solutions.</span></h2>
+      <p>I’m looking forward to opportunities where I can keep learning, contribute to a team, and work on practical software, data, and AI problems.</p>
+      <a class="button button-primary" href="#contact">Let’s connect</a><div class="next-mark">A<span>.</span></div>
+    </div>
+  </section>
 
-        <article class="skill-card reveal">
-          <div class="skill-icon">Da</div>
-          <h3>Data Analysis</h3>
-          <div class="skill-tags"><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span><span>EDA</span></div>
-        </article>
-
-        <article class="skill-card reveal">
-          <div class="skill-icon">Ge</div>
-          <h3>Generative AI</h3>
-          <div class="skill-tags"><span>LLM Fundamentals</span><span>Prompting</span><span>RAG Concepts</span><span>Gemini API</span></div>
-        </article>
-
-        <article class="skill-card reveal">
-          <div class="skill-icon">Dev</div>
-          <h3>Tools &amp; Platforms</h3>
-          <div class="skill-tags"><span>Git</span><span>GitHub</span><span>Jupyter</span><span>Google Colab</span><span>Streamlit</span></div>
-        </article>
+  <!-- CONTACT -->
+  <section class="section-wrap section-block contact-section" id="contact">
+    <div class="section-label reveal"><span>06</span> / SAY HELLO</div>
+    <div class="contact-layout">
+      <div class="reveal"><h2>Have a role or<br><span class="gradient-text">project in mind?</span></h2><p class="contact-lead">I’d be happy to connect about entry-level opportunities, projects, and learning.</p></div>
+      <div class="contact-panel reveal reveal-delay">
+        <a class="contact-link" href="https://github.com/ArchanaPathepuram" target="_blank" rel="noopener"><span class="contact-icon">⌘</span><span><small>GITHUB</small><strong>Explore my repositories</strong></span></a>
+        <a class="contact-link" href="https://www.linkedin.com/in/archana-pathepuram/" target="_blank" rel="noopener"><span class="contact-icon">in</span><span><small>LINKEDIN</small><strong>Connect on LinkedIn</strong></span></a>
+        <a class="contact-link" href="mailto:archanapathepuram9@gmail.com"><span class="contact-icon">✉</span><span><small>EMAIL</small><strong>archanapathepuram9@gmail.com</strong></span></a>
       </div>
-    </section>
+    </div>
+  </section>
+</main>
 
-    <section class="section-wrap section-block" id="projects">
-      <div class="section-heading reveal">
-        <p class="eyebrow">THINGS I'VE BUILT</p>
-        <h2>Selected <span class="gradient-text">Projects.</span></h2>
-        <p class="section-intro">A few projects where I've applied machine learning, NLP and AI concepts.</p>
-      </div>
+<footer class="site-footer section-wrap">
+  <a class="brand" href="#home"><span class="brand-icon">A<span></span></span><span>archana<span class="brand-period">.</span></span></a>
+  <p>Designed with curiosity & a little bit of code.</p>
+  <span>© <span id="year"></span> Pathepuram Archana</span>
+  <a class="back-top" href="#home" aria-label="Back to top">↑</a>
+</footer>
 
-      <div class="projects-grid">
-        <article class="project-card project-featured reveal">
-          <div class="project-top"><span class="project-index">01 / ML</span><span class="project-symbol">♡</span></div>
-          <h3>Heart Disease Prediction</h3>
-          <p>A machine learning project that uses health-related input features to estimate heart disease risk. Includes data preparation, model training and evaluation.</p>
-          <div class="skill-tags"><span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>Streamlit</span></div>
-          <a class="project-link" href="https://github.com/ArchanaPathepuram/Heart_Disease" target="_blank" rel="noopener noreferrer">View project <span>↗</span></a>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-top"><span class="project-index">02 / NLP</span><span class="project-symbol">〰</span></div>
-          <h3>NLP-Based Stress Detection</h3>
-          <p>Explores text-based stress detection using NLP preprocessing and deep learning models, including recurrent neural network approaches.</p>
-          <div class="skill-tags"><span>Python</span><span>NLP</span><span>BiLSTM</span><span>GloVe</span></div>
-          <a class="project-link" href="https://github.com/ArchanaPathepuram/NLP_Based_Stress_Detection" target="_blank" rel="noopener noreferrer">View project <span>↗</span></a>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-top"><span class="project-index">03 / CV</span><span class="project-symbol">✳</span></div>
-          <h3>Animal Classification</h3>
-          <p>A computer vision project focused on classifying animal images using machine learning techniques and image-based features.</p>
-          <div class="skill-tags"><span>Python</span><span>Machine Learning</span><span>Image Classification</span></div>
-          <a class="project-link" href="https://github.com/ArchanaPathepuram/Animal_Classification_Machine_Learning" target="_blank" rel="noopener noreferrer">View project <span>↗</span></a>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-top"><span class="project-index">04 / GEN AI</span><span class="project-symbol">✧</span></div>
-          <h3>AI Resume Analyzer</h3>
-          <p>A Python and Streamlit application concept that analyzes resume content against a target role and uses an AI API to generate feedback.</p>
-          <div class="skill-tags"><span>Python</span><span>Streamlit</span><span>Gemini API</span><span>LLM</span></div>
-          <a class="project-link" href="https://github.com/ArchanaPathepuram/AI_Resume_Analyser" target="_blank" rel="noopener noreferrer">View project <span>↗</span></a>
-        </article>
-      </div>
-
-      <div class="more-projects reveal">
-        <span>More code and experiments</span>
-        <a class="button button-outline" href="https://github.com/ArchanaPathepuram" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a>
-      </div>
-    </section>
-
-    <section class="section-wrap section-block" id="certifications">
-      <div class="section-heading reveal">
-        <p class="eyebrow">LEARNING ALONG THE WAY</p>
-        <h2>Training &amp; <span class="gradient-text">Certifications.</span></h2>
-      </div>
-
-      <div class="cert-list">
-        <article class="cert-item reveal"><span class="cert-mark">✦</span><div><h3>AI/ML Virtual Internship</h3><p>Infosys Springboard</p></div><span class="cert-type">Internship</span></article>
-        <article class="cert-item reveal"><span class="cert-mark">✦</span><div><h3>Data Analytics</h3><p>Cisco</p></div><span class="cert-type">Training</span></article>
-        <article class="cert-item reveal"><span class="cert-mark">✦</span><div><h3>Python Essentials</h3><p>Cisco Networking Academy</p></div><span class="cert-type">Course</span></article>
-        <article class="cert-item reveal"><span class="cert-mark">✦</span><div><h3>Cloud / AI Virtual Internship</h3><p>AWS Academy / AICTE-EduSkills</p></div><span class="cert-type">Internship</span></article>
-        <article class="cert-item reveal"><span class="cert-mark">✦</span><div><h3>Python Internship</h3><p>E-Code, Hyderabad</p></div><span class="cert-type">Internship</span></article>
-      </div>
-      <p class="cert-note">Please verify each title against your actual certificate before sharing this portfolio with recruiters.</p>
-    </section>
-
-    <section class="contact-section section-wrap" id="contact">
-      <div class="contact-panel reveal">
-        <p class="eyebrow">HAVE AN OPPORTUNITY?</p>
-        <h2>Let's build something<br><span class="gradient-text">meaningful.</span></h2>
-        <p>I'm interested in entry-level opportunities in AI/ML, Data Science and related roles. Feel free to connect with me.</p>
-        <div class="contact-actions">
-          <a class="button button-primary" href="https://www.linkedin.com/in/archana-pathepuram/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
-          <a class="button button-outline" href="https://github.com/ArchanaPathepuram" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <a class="logo" href="#home">AP<span>.</span></a>
-    <p>Designed and built by Archana Pathepuram</p>
-    <a href="#home" class="back-top">Back to top ↑</a>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
