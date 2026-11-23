@@ -4,14 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Archana Pathepuram - Software Engineer, Software Developer and CSE Graduate.">
+    <meta name="description" content="Archana Pathepuram - Software Engineer and CSE Graduate">
+
     <title>Archana Pathepuram | Software Engineer</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
 </head>
 
 <body>
@@ -19,7 +21,8 @@
 <nav class="navbar">
     <a class="brand" href="#home">AP<span>.</span></a>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+    <button class="menu-toggle" id="menuToggle"
+        aria-label="Toggle navigation" aria-expanded="false">
         ☰
     </button>
 
@@ -35,7 +38,7 @@
 
 <main>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <section class="hero section-shell" id="home">
 
     <div class="hero-content reveal">
@@ -53,7 +56,7 @@
         </h1>
 
         <div class="role-wrap">
-            <span class="role-prefix">I am a</span>
+            <span>I am a</span>
             <span id="typedRole" class="typed-role">Software Engineer</span>
             <span class="cursor">|</span>
         </div>
@@ -75,17 +78,16 @@
         </div>
 
         <div class="social-links">
-            <a href="https://github.com/ArchanaPathepuram" target="_blank">GitHub ↗</a>
-            <a href="https://www.linkedin.com/in/archana-pathepuram/" target="_blank">LinkedIn ↗</a>
+            <a href="https://github.com/ArchanaPathepuram" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/archana-pathepuram/" target="_blank" rel="noopener">LinkedIn ↗</a>
             <a href="mailto:archanapathepuram9@gmail.com">Email ↗</a>
         </div>
 
     </div>
 
     <div class="hero-side reveal">
-
         <div class="photo-frame">
-            <img src="archana.jpg" alt="Archana Pathepuram">
+            <img src="./archana.jpg" alt="Archana Pathepuram">
         </div>
 
         <div class="floating-card card-top">
@@ -101,13 +103,11 @@
             CSE GRADUATE<br>
             <b>2026</b>
         </div>
-
     </div>
 
 </section>
 
-
-<!-- ABOUT SECTION -->
+<!-- ABOUT -->
 <section class="section-shell section-block" id="about">
 
     <div class="section-kicker">01 / ABOUT ME</div>
@@ -116,7 +116,6 @@
 
         <div class="section-title reveal">
             <p class="overline">A LITTLE INTRODUCTION</p>
-
             <h2>
                 Curious mind.<br>
                 <span class="gradient-text">Developer mindset.</span>
@@ -140,8 +139,7 @@
             <p>
                 My project experience also includes machine learning,
                 NLP and data-focused applications. I enjoy learning
-                new technologies, improving my coding skills and
-                collaborating on meaningful development work.
+                new technologies and improving my coding skills.
             </p>
 
             <div class="about-tags">
@@ -151,11 +149,9 @@
             </div>
 
         </div>
-
     </div>
 
     <div class="quick-facts">
-
         <div class="fact">
             <strong>600+</strong>
             <span>LeetCode Problems Solved</span>
@@ -170,19 +166,16 @@
             <strong>2026</strong>
             <span>CSE Graduate</span>
         </div>
-
     </div>
 
 </section>
 
-
-<!-- SKILLS SECTION -->
+<!-- SKILLS -->
 <section class="section-shell section-block" id="skills">
 
     <div class="section-kicker">02 / TECHNICAL SKILLS</div>
 
     <div class="section-heading reveal">
-
         <div>
             <p class="overline">MY TOOLKIT</p>
             <h2>
@@ -195,7 +188,6 @@
             Programming, frontend development, backend technologies
             and AI/ML.
         </p>
-
     </div>
 
     <div class="skills-grid">
@@ -204,81 +196,59 @@
             <div class="skill-icon">&lt;/&gt;</div>
             <h3>Programming Languages</h3>
             <p>Core programming and database languages</p>
-
             <div class="chips">
-                <span>Python</span>
-                <span>Java</span>
-                <span>C</span>
-                <span>SQL</span>
+                <span>Python</span><span>Java</span>
+                <span>C</span><span>SQL</span>
             </div>
         </article>
-
 
         <article class="skill-card reveal">
             <div class="skill-icon">◈</div>
             <h3>Frontend Development</h3>
             <p>Creating responsive user interfaces</p>
-
             <div class="chips">
-                <span>HTML5</span>
-                <span>CSS3</span>
-                <span>JavaScript</span>
-                <span>React.js</span>
+                <span>HTML5</span><span>CSS3</span>
+                <span>JavaScript</span><span>React.js</span>
             </div>
         </article>
-
 
         <article class="skill-card reveal">
             <div class="skill-icon">⌘</div>
             <h3>Backend Development</h3>
             <p>Application logic and API development</p>
-
             <div class="chips">
-                <span>FastAPI</span>
-                <span>Flask</span>
-                <span>REST APIs</span>
-                <span>Streamlit</span>
+                <span>FastAPI</span><span>Flask</span>
+                <span>REST APIs</span><span>Streamlit</span>
             </div>
         </article>
-
 
         <article class="skill-card reveal">
             <div class="skill-icon">▤</div>
             <h3>Database & Fundamentals</h3>
             <p>Software engineering concepts</p>
-
             <div class="chips">
-                <span>MySQL</span>
-                <span>OOP</span>
-                <span>DSA</span>
-                <span>DBMS</span>
-                <span>SDLC</span>
-                <span>Agile</span>
+                <span>MySQL</span><span>OOP</span>
+                <span>DSA</span><span>DBMS</span>
+                <span>SDLC</span><span>Agile</span>
                 <span>Scrum</span>
             </div>
         </article>
-
 
         <article class="skill-card reveal">
             <div class="skill-icon">⌁</div>
             <h3>Tools & Platforms</h3>
             <p>Development and collaboration tools</p>
-
             <div class="chips">
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>VS Code</span>
-                <span>Render</span>
+                <span>Git</span><span>GitHub</span>
+                <span>VS Code</span><span>Render</span>
                 <span>Power BI</span>
             </div>
         </article>
-
 
         <article class="skill-card reveal">
             <div class="skill-icon">✳</div>
             <h3>AI, ML & Data Science</h3>
             <p>Additional technical experience</p>
-
             <div class="chips">
                 <span>Machine Learning</span>
                 <span>Deep Learning</span>
@@ -292,17 +262,14 @@
         </article>
 
     </div>
-
 </section>
 
-
-<!-- PROJECTS SECTION -->
+<!-- PROJECTS -->
 <section class="section-shell section-block" id="projects">
 
     <div class="section-kicker">03 / SELECTED WORK</div>
 
     <div class="section-heading reveal">
-
         <div>
             <p class="overline">THINGS I'VE WORKED ON</p>
             <h2>
@@ -315,173 +282,82 @@
             Practical applications combining programming,
             development technologies and AI.
         </p>
-
     </div>
 
-
     <div class="project-filters">
-
         <button class="filter-btn active" data-filter="all">All Projects</button>
         <button class="filter-btn" data-filter="application">Applications</button>
         <button class="filter-btn" data-filter="ml">Machine Learning</button>
         <button class="filter-btn" data-filter="nlp">NLP</button>
         <button class="filter-btn" data-filter="data">Data Analytics</button>
-
     </div>
-
 
     <div class="projects-grid">
 
         <article class="project-card reveal" data-category="application">
-
             <div class="project-top">
-                <span>01 / APPLICATION</span>
-                <span class="project-mark">✳</span>
+                <span>01 / APPLICATION</span><span>✳</span>
             </div>
-
             <h3>AI Resume Analyzer</h3>
-
-            <p>
-                A web application that analyzes uploaded resumes against
-                target roles and provides AI-generated feedback.
-            </p>
-
+            <p>A web application that analyzes uploaded resumes against target roles and provides AI-generated feedback.</p>
             <div class="project-tech">
-                <span>Python</span>
-                <span>Streamlit</span>
-                <span>Gemini API</span>
+                <span>Python</span><span>Streamlit</span><span>Gemini API</span>
             </div>
-
-            <a href="https://github.com/ArchanaPathepuram/AI-Resume-Analyzer"
-               target="_blank" class="project-link">
-                View on GitHub ↗
-            </a>
-
+            <a href="https://github.com/ArchanaPathepuram/AI-Resume-Analyzer" target="_blank" rel="noopener" class="project-link">View on GitHub ↗</a>
         </article>
-
 
         <article class="project-card reveal" data-category="application">
-
             <div class="project-top">
-                <span>02 / APPLICATION</span>
-                <span class="project-mark">⌘</span>
+                <span>02 / APPLICATION</span><span>⌘</span>
             </div>
-
             <h3>Heart Disease Risk Assessment</h3>
-
-            <p>
-                A Python-based prediction application using clinical
-                parameters and a Decision Tree classification model.
-            </p>
-
+            <p>A Python-based prediction application using clinical parameters and a Decision Tree classification model.</p>
             <div class="project-tech">
-                <span>Python</span>
-                <span>Scikit-learn</span>
-                <span>Streamlit</span>
+                <span>Python</span><span>Scikit-learn</span><span>Streamlit</span>
             </div>
-
-            <a href="https://github.com/ArchanaPathepuram/Heart_Disease"
-               target="_blank" class="project-link">
-                View on GitHub ↗
-            </a>
-
+            <a href="https://github.com/ArchanaPathepuram/Heart_Disease" target="_blank" rel="noopener" class="project-link">View on GitHub ↗</a>
         </article>
-
 
         <article class="project-card reveal" data-category="nlp">
-
             <div class="project-top">
-                <span>03 / NLP & DEEP LEARNING</span>
-                <span class="project-mark">⌁</span>
+                <span>03 / NLP & DEEP LEARNING</span><span>⌁</span>
             </div>
-
             <h3>NLP-Based Stress Detection</h3>
-
-            <p>
-                A text classification project that explores
-                stress-related language patterns using NLP and
-                deep learning.
-            </p>
-
+            <p>A text classification project exploring stress-related language patterns using NLP and deep learning.</p>
             <div class="project-tech">
-                <span>Python</span>
-                <span>NLP</span>
-                <span>BiLSTM</span>
-                <span>TensorFlow</span>
+                <span>Python</span><span>NLP</span><span>BiLSTM</span><span>TensorFlow</span>
             </div>
-
-            <a href="https://github.com/ArchanaPathepuram/NLP_Based_Stress_Detection"
-               target="_blank" class="project-link">
-                View on GitHub ↗
-            </a>
-
+            <a href="https://github.com/ArchanaPathepuram/NLP_Based_Stress_Detection" target="_blank" rel="noopener" class="project-link">View on GitHub ↗</a>
         </article>
-
 
         <article class="project-card reveal" data-category="ml">
-
             <div class="project-top">
-                <span>04 / MACHINE LEARNING</span>
-                <span class="project-mark">◉</span>
+                <span>04 / MACHINE LEARNING</span><span>◉</span>
             </div>
-
             <h3>Animal Classification</h3>
-
-            <p>
-                An image classification application that uses
-                machine learning to identify animal categories
-                from image inputs.
-            </p>
-
+            <p>An image classification application that uses machine learning to identify animal categories from image inputs.</p>
             <div class="project-tech">
-                <span>Python</span>
-                <span>Scikit-learn</span>
-                <span>Streamlit</span>
+                <span>Python</span><span>Scikit-learn</span><span>Streamlit</span>
             </div>
-
-            <a href="https://github.com/ArchanaPathepuram/Animal_Classification_Machine_Learning"
-               target="_blank" class="project-link">
-                View on GitHub ↗
-            </a>
-
+            <a href="https://github.com/ArchanaPathepuram/Animal_Classification_Machine_Learning" target="_blank" rel="noopener" class="project-link">View on GitHub ↗</a>
         </article>
 
-
         <article class="project-card reveal" data-category="data">
-
             <div class="project-top">
-                <span>05 / DATA & ANALYTICS</span>
-                <span class="project-mark">↗</span>
+                <span>05 / DATA & ANALYTICS</span><span>↗</span>
             </div>
-
             <h3>Hybrid AI Stock Market Analysis</h3>
-
-            <p>
-                A stock market analysis project combining QINN,
-                Transformer and GPT-based approaches to explore
-                market trends and predictions.
-            </p>
-
+            <p>A stock market analysis project combining QINN, Transformer and GPT-based approaches to explore market trends and predictions.</p>
             <div class="project-tech">
-                <span>Python</span>
-                <span>Transformers</span>
-                <span>GPT-2</span>
-                <span>QINN</span>
+                <span>Python</span><span>Transformers</span><span>GPT-2</span><span>QINN</span>
             </div>
-
-            <a href="https://github.com/ArchanaPathepuram/Hybdrid_Ai_StockMarket_Analysis_Qinn-Transformer"
-               target="_blank" class="project-link">
-                View on GitHub ↗
-            </a>
-
+            <a href="https://github.com/ArchanaPathepuram/Hybdrid_Ai_StockMarket_Analysis_Qinn-Transformer" target="_blank" rel="noopener" class="project-link">View on GitHub ↗</a>
         </article>
 
     </div>
-
 </section>
 
-
-<!-- CERTIFICATIONS SECTION -->
+<!-- CERTIFICATIONS -->
 <section class="section-shell section-block" id="certifications">
 
     <div class="section-kicker">04 / LEARNING & ACHIEVEMENTS</div>
@@ -489,81 +365,56 @@
     <div class="section-heading reveal">
         <div>
             <p class="overline">KEEPING UP THE MOMENTUM</p>
-            <h2>
-                Learning never
-                <span class="gradient-text">stops.</span>
-            </h2>
+            <h2>Learning never <span class="gradient-text">stops.</span></h2>
         </div>
     </div>
-
 
     <div class="cert-grid">
 
         <article class="cert-card reveal">
             <span class="cert-index">01</span>
-            <div>
-                <h3>AI/ML Training</h3>
-                <p>Dr. Reddy's Foundation - GROW Tech</p>
-            </div>
+            <div><h3>AI/ML Training</h3><p>Dr. Reddy's Foundation - GROW Tech</p></div>
         </article>
 
         <article class="cert-card reveal">
             <span class="cert-index">02</span>
-            <div>
-                <h3>AI/ML Internship</h3>
-                <p>AICTE Internship</p>
-            </div>
+            <div><h3>AI/ML Internship</h3><p>AICTE Internship</p></div>
         </article>
 
         <article class="cert-card reveal">
             <span class="cert-index">03</span>
-            <div>
-                <h3>Python Internship</h3>
-                <p>E-Code Learning Software Services</p>
-            </div>
+            <div><h3>Python Internship</h3><p>E-Code Learning Software Services</p></div>
         </article>
 
         <article class="cert-card reveal">
             <span class="cert-index">04</span>
-            <div>
-                <h3>Data Analytics</h3>
-                <p>Cisco Networking Academy</p>
-            </div>
+            <div><h3>Data Analytics</h3><p>Cisco Networking Academy</p></div>
         </article>
 
         <article class="cert-card reveal">
             <span class="cert-index">05</span>
-            <div>
-                <h3>Python Essentials 1 & 2</h3>
-                <p>Cisco Networking Academy</p>
-            </div>
+            <div><h3>Python Essentials 1 & 2</h3><p>Cisco Networking Academy</p></div>
         </article>
 
         <article class="cert-card reveal">
             <span class="cert-index">06</span>
-            <div>
-                <h3>ServiceNow Micro-Certification</h3>
-                <p>ServiceNow</p>
-            </div>
+            <div><h3>ServiceNow Micro-Certification</h3><p>ServiceNow</p></div>
         </article>
 
     </div>
-
 
     <div class="achievement-strip reveal">
         <span class="achievement-symbol">✦</span>
         <p>
             <strong>600+ LeetCode Problems Solved</strong><br>
-            Consistent practice in data structures, algorithms
-            and problem-solving.
+            Consistent practice in data structures, algorithms and problem-solving.
         </p>
-        <a href="https://leetcode.com/" target="_blank">LeetCode ↗</a>
+        <a href="https://leetcode.com/" target="_blank" rel="noopener">LeetCode ↗</a>
     </div>
 
 </section>
 
-
-<!-- CONTACT SECTION -->
+<!-- CONTACT -->
 <section class="section-shell section-block" id="contact">
 
     <div class="section-kicker">05 / GET IN TOUCH</div>
@@ -583,43 +434,26 @@
             opportunities. Feel free to connect.
         </p>
 
-        <a href="mailto:archanapathepuram9@gmail.com"
-           class="button button-primary">
+        <a href="mailto:archanapathepuram9@gmail.com" class="button button-primary">
             Say Hello ↗
         </a>
 
         <div class="contact-socials">
-            <a href="https://www.linkedin.com/in/archana-pathepuram/"
-               target="_blank">LinkedIn ↗</a>
-
-            <a href="https://github.com/ArchanaPathepuram"
-               target="_blank">GitHub ↗</a>
-
+            <a href="https://www.linkedin.com/in/archana-pathepuram/" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a href="https://github.com/ArchanaPathepuram" target="_blank" rel="noopener">GitHub ↗</a>
             <a href="mailto:archanapathepuram9@gmail.com">Email ↗</a>
         </div>
 
     </div>
-
 </section>
 
 </main>
 
-
-<!-- FOOTER -->
 <footer class="footer section-shell">
-
     <a class="brand" href="#home">AP<span>.</span></a>
-
-    <p>
-        Designed & Built by Archana Pathepuram
-        © <span id="year"></span>
-    </p>
-
+    <p>Designed & Built by Archana Pathepuram © <span id="year"></span></p>
     <a href="#home">Back to top ↑</a>
-
 </footer>
-
-<script src="script.js"></script>
 
 </body>
 </html>
