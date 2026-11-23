@@ -1,162 +1,243 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Footer year
-  const yearElement = document.getElementById("year");
-  if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
-  }
 
-  // Mobile navigation
-  const menuToggle = document.getElementById("menuToggle");
-  const navMenu = document.getElementById("navMenu");
+// ======================================
+// 1. TYPING ANIMATION
+// ======================================
 
-  if (menuToggle && navMenu) {
-    menuToggle.addEventListener("click", () => {
-      const isOpen = navMenu.classList.toggle("open");
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
-      menuToggle.setAttribute(
-        "aria-label",
-        isOpen ? "Close navigation" : "Open navigation"
-      );
-    });
+const roles = [
+    "Software Engineer",
+    "Software Developer",
+    "Python Developer",
+    "Backend Developer",
+    "Web Developer",
+    "AI/ML Enthusiast"
+];
 
-    navMenu.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        navMenu.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open navigation");
-      });
-    });
-  }
+const typedRole = document.getElementById("typedRole");
 
-  // Typing animation
-  const typedRole = document.getElementById("typedRole");
+let roleIndex = 0;
+let charIndex = 0;
+let deleting = false;
 
-  if (typedRole) {
-    const roles = [
-      "Artificial Intelligence",
-      "Machine Learning",
-      "Data Science",
-      "Natural Language Processing",
-      "Generative AI"
-    ];
+function typeRole() {
 
-    let roleIndex = 0;
-    let characterIndex = roles[0].length;
-    let deleting = true;
+    if (!typedRole) return;
 
-    function typeRole() {
-      const currentRole = roles[roleIndex];
+    const currentRole = roles[roleIndex];
 
-      if (deleting) {
-        characterIndex--;
-      } else {
-        characterIndex++;
-      }
+    typedRole.textContent = currentRole.substring(0, charIndex);
 
-      typedRole.textContent = currentRole.substring(
-        0,
-        Math.max(0, characterIndex)
-      );
+    if (!deleting && charIndex < currentRole.length) {
 
-      let delay = deleting ? 45 : 85;
+        charIndex++;
+        setTimeout(typeRole, 85);
 
-      if (!deleting && characterIndex === currentRole.length) {
+    } else if (!deleting) {
+
         deleting = true;
-        delay = 1500;
-      } else if (deleting && characterIndex === 0) {
+        setTimeout(typeRole, 1200);
+
+    } else if (charIndex > 0) {
+
+        charIndex--;
+        setTimeout(typeRole, 40);
+
+    } else {
+
         deleting = false;
         roleIndex = (roleIndex + 1) % roles.length;
-        delay = 350;
-      }
 
-      window.setTimeout(typeRole, delay);
+        setTimeout(typeRole, 250);
     }
+}
 
-    window.setTimeout(() => {
-      characterIndex = roles[0].length;
-      typeRole();
-    }, 1800);
-  }
 
-  // Project filters
-  const filterButtons = document.querySelectorAll(".filter-button");
-  const projectCards = document.querySelectorAll(".project-card");
+// ======================================
+// 2. MOBILE NAVIGATION
+// ======================================
 
-  filterButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      const selectedFilter = button.dataset.filter;
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
 
-      filterButtons.forEach(item => {
-        item.classList.remove("active");
-      });
+if (menuToggle && navLinks) {
 
-      button.classList.add("active");
+    menuToggle.addEventListener("click", () => {
 
-      projectCards.forEach(card => {
-        const category = card.dataset.category;
-        const shouldShow =
-          selectedFilter === "all" || category === selectedFilter;
+        const isOpen = navLinks.classList.toggle("open");
 
-        card.hidden = !shouldShow;
-      });
+        menuToggle.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+        );
+
     });
-  });
 
-  // Scroll reveal animation
-  const revealElements = document.querySelectorAll(".reveal");
+    navLinks.querySelectorAll("a").forEach(link => {
 
-  if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
+        link.addEventListener("click", () => {
+
+            navLinks.classList.remove("open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
         });
-      },
-      {
-        threshold: 0.12
-      }
+
+    });
+}
+
+
+// ======================================
+// 3. PROJECT FILTERING
+// ======================================
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+const projectCards = document.querySelectorAll(".project-card");
+
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const filter = button.dataset.filter;
+
+        filterButtons.forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        projectCards.forEach(card => {
+
+            const category = card.dataset.category;
+
+            if (filter === "all" || filter === category) {
+
+                card.hidden = false;
+
+            } else {
+
+                card.hidden = true;
+
+            }
+
+        });
+
+    });
+
+});
+
+
+// ======================================
+// 4. SCROLL REVEAL ANIMATION
+// ======================================
+
+const revealElements = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window) {
+
+    const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("visible");
+
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
     );
 
     revealElements.forEach(element => {
-      observer.observe(element);
+        revealObserver.observe(element);
     });
-  } else {
+
+} else {
+
     revealElements.forEach(element => {
-      element.classList.add("visible");
+        element.classList.add("visible");
     });
-  }
 
-  // Highlight the active navigation link
-  const sections = document.querySelectorAll(
-    "main section[id]"
-  );
+}
 
-  const navLinks = document.querySelectorAll(".nav-link");
 
-  if ("IntersectionObserver" in window) {
+// ======================================
+// 5. ACTIVE NAVIGATION ON SCROLL
+// ======================================
+
+const sections = document.querySelectorAll("main section[id]");
+const navItems = document.querySelectorAll(".nav-links a");
+
+if ("IntersectionObserver" in window) {
+
     const sectionObserver = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            navLinks.forEach(link => {
-              link.classList.toggle(
-                "active",
-                link.getAttribute("href") === "#" + entry.target.id
-              );
+
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    navItems.forEach(link => {
+
+                        const isActive =
+                            link.getAttribute("href") ===
+                            "#" + entry.target.id;
+
+                        link.classList.toggle(
+                            "active",
+                            isActive
+                        );
+
+                    });
+
+                }
+
             });
-          }
-        });
-      },
-      {
-        rootMargin: "-30% 0px -60% 0px"
-      }
+
+        },
+
+        {
+            rootMargin: "-35% 0px -55% 0px"
+        }
+
     );
 
     sections.forEach(section => {
-      sectionObserver.observe(section);
+        sectionObserver.observe(section);
     });
-  }
+
+}
+
+
+// ======================================
+// 6. AUTOMATIC FOOTER YEAR
+// ======================================
+
+const yearElement = document.getElementById("year");
+
+if (yearElement) {
+
+    yearElement.textContent = new Date().getFullYear();
+
+}
+
+
+// ======================================
+// 7. START ANIMATIONS
+// ======================================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    typeRole();
+
 });
