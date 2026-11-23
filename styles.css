@@ -47,8 +47,8 @@ button {
 
 .navbar {
     width: min(1160px, 90%);
-    margin: auto;
     height: 82px;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -241,7 +241,7 @@ button {
     color: var(--accent2);
 }
 
-/* HERO PHOTO */
+/* HERO IMAGE */
 
 .hero-side {
     position: relative;
@@ -662,37 +662,19 @@ button {
     transform: translateY(0);
 }
 
-/* RESPONSIVE DESIGN */
+/* RESPONSIVE */
 
 @media (max-width: 900px) {
-
-    .nav-links {
-        gap: 16px;
-    }
-
-    .hero {
-        gap: 30px;
-    }
-
-    .photo-frame {
-        width: 280px;
-        height: 340px;
-    }
-
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .nav-links { gap: 16px; }
+    .hero { gap: 30px; }
+    .photo-frame { width: 280px; height: 340px; }
+    .skills-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 700px) {
+    .navbar { height: 70px; }
 
-    .navbar {
-        height: 70px;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
+    .menu-toggle { display: block; }
 
     .nav-links {
         display: none;
@@ -709,13 +691,7 @@ button {
         gap: 18px;
     }
 
-    .nav-links.open {
-        display: flex;
-    }
-
-    .nav-links a {
-        padding: 5px;
-    }
+    .nav-links.open { display: flex; }
 
     .hero {
         grid-template-columns: 1fr;
@@ -724,32 +700,14 @@ button {
         gap: 45px;
     }
 
-    .hero-description {
-        margin: auto;
-    }
+    .hero-description { margin: auto; }
+    .hero-actions, .social-links, .role-wrap { justify-content: center; }
 
-    .hero-actions,
-    .social-links,
-    .role-wrap {
-        justify-content: center;
-    }
+    .hero-side { min-height: 390px; }
+    .photo-frame { width: 270px; height: 330px; }
 
-    .hero-side {
-        min-height: 390px;
-    }
-
-    .photo-frame {
-        width: 270px;
-        height: 330px;
-    }
-
-    .card-top {
-        left: 0;
-    }
-
-    .card-bottom {
-        right: 0;
-    }
+    .card-top { left: 0; }
+    .card-bottom { right: 0; }
 
     .about-grid {
         grid-template-columns: 1fr;
@@ -761,10 +719,7 @@ button {
         flex-direction: column;
     }
 
-    .projects-grid,
-    .cert-grid {
-        grid-template-columns: 1fr;
-    }
+    .projects-grid, .cert-grid { grid-template-columns: 1fr; }
 
     .achievement-strip {
         align-items: flex-start;
@@ -778,25 +733,16 @@ button {
 }
 
 @media (max-width: 480px) {
+    .skills-grid { grid-template-columns: 1fr; }
 
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .quick-facts {
-        grid-template-columns: 1fr;
-    }
+    .quick-facts { grid-template-columns: 1fr; }
 
     .fact + .fact {
         border-left: none;
         border-top: 1px solid var(--border);
     }
 
-    .hero h1 {
-        font-size: 52px;
-    }
+    .hero h1 { font-size: 52px; }
 
-    .section-block {
-        padding-top: 70px;
-    }
+    .section-block { padding-top: 70px; }
 }
