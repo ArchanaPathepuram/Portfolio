@@ -2,367 +2,348 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Archana Pathepuram - Software Engineer Portfolio">
-    <title>Archana Pathepuram | Software Engineer</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="./styles.css">
-    <script src="./script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Archana Pathepuram - Software Engineer and Computer Science graduate.">
+  <title>Archana Pathepuram | Software Developer</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
 </head>
 <body>
 
-<nav class="navbar">
-    <a class="brand" href="#home">AP<span>.</span></a>
+  <header class="header">
+    <nav class="navbar container">
+      <a href="#home" class="logo">Archana<span>.</span></a>
 
-    <button class="menu-toggle" id="menuToggle"
-        aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <button class="menu-toggle" id="menu-toggle"
+        aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
 
-    <div class="nav-links" id="navLinks">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#contact" class="nav-contact">Let's Talk ↗</a>
-    </div>
-</nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<main>
+  <main>
+    <section class="hero section" id="home">
+      <div class="container hero-content">
+        <div class="hero-text reveal">
+          <p class="eyebrow">HELLO, I'M</p>
+          <h1>Archana <span>Pathepuram</span></h1>
+          <h2>I'm a <span id="typing-text">Software Developer</span></h2>
+          <p class="hero-description">
+            Computer Science graduate interested in building practical
+            software solutions using programming, web technologies
+            and Artificial Intelligence.
+          </p>
 
-<!-- HERO -->
-<section class="hero section-shell" id="home">
-    <div class="hero-content reveal">
-        <div class="availability">
-            <span class="status-dot"></span>
-            OPEN TO SOFTWARE ENGINEERING OPPORTUNITIES
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">Explore Projects</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+
+          <div class="social-links">
+            <a href="https://github.com/ArchanaPathepuram"
+               target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/archana-pathepuram/"
+               target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="mailto:archanapathepuram@gmail.com">Email</a>
+          </div>
         </div>
 
-        <p class="eyebrow">HELLO, WORLD! I'M</p>
-
-        <h1>Archana<br><span class="gradient-text">Pathepuram.</span></h1>
-
-        <div class="role-wrap">
-            <span>Aspiring</span>
-            <span id="typedRole" class="typed-role">Software Engineer</span>
-            <span class="cursor">|</span>
-        </div>
-
-        <p class="hero-description">
-            Computer Science graduate passionate about software
-            engineering, application development and problem-solving.
-            I enjoy building responsive web applications, writing
-            efficient code and exploring technologies that solve
-            real-world problems.
-        </p>
-
-        <div class="hero-actions">
-            <a href="#projects" class="button button-primary">Explore Projects ↗</a>
-            <a href="#contact" class="button button-outline">Contact Me</a>
-        </div>
-
-        <div class="social-links">
-            <a href="https://github.com/ArchanaPathepuram" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-            <a href="https://www.linkedin.com/in/archana-pathepuram/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-            <a href="mailto:archanapathepuram@gmail.com">Email ↗</a>
-        </div>
-    </div>
-
-    <div class="hero-side reveal">
-        <div class="photo-frame">
+        <div class="hero-image reveal">
+          <div class="image-frame">
             <img src="./archana.jpg" alt="Archana Pathepuram">
+          </div>
+          <div class="image-decoration"></div>
         </div>
-        <div class="floating-card card-top">✦ Code · Create · Improve</div>
-        <div class="floating-card card-bottom">
-            <span class="status-dot"></span> Always learning and building
-        </div>
-        <div class="hero-stamp">COMPUTER SCIENCE<br><b>2026</b></div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- ABOUT -->
-<section class="section-shell section-block" id="about">
-    <div class="section-kicker">01 / ABOUT ME</div>
-
-    <div class="about-grid">
-        <div class="section-title reveal">
-            <p class="overline">WHO I AM</p>
-            <h2>Building ideas into <span class="gradient-text">applications.</span></h2>
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">GET TO KNOW ME</p>
+          <h2>About <span>Me</span></h2>
         </div>
 
-        <div class="about-copy reveal">
-            <p class="lead">
-                I'm Archana Pathepuram, a Computer Science and
-                Engineering graduate from CMR Institute of Technology,
-                Hyderabad.
-            </p>
-            <p>
-                I am interested in Software Engineering and Software
-                Development, with hands-on experience in Python, Java,
-                SQL, web technologies and application development.
-            </p>
-            <p>
-                I enjoy developing responsive interfaces, understanding
-                application logic, solving programming problems and
-                working with different technologies to create practical
-                solutions.
-            </p>
-            <p>
-                Alongside software development, I have also worked on
-                Machine Learning, Deep Learning and NLP projects.
-            </p>
-            <div class="about-tags">
-                <span>Software Development</span>
-                <span>Problem Solving</span>
-                <span>Web Technologies</span>
-                <span>Continuous Learning</span>
+        <div class="about-content reveal">
+          <p>
+            I am a Computer Science graduate from CMR Institute of
+            Technology, Hyderabad. I enjoy solving problems, learning
+            new technologies and developing applications that address
+            real-world challenges.
+          </p>
+          <p>
+            My technical interests include software development,
+            Python programming, databases, web technologies and
+            AI/ML applications. I have worked on academic and
+            personal projects involving machine learning, NLP
+            and application development.
+          </p>
+
+          <div class="about-stats">
+            <div class="stat-card">
+              <h3>600+</h3>
+              <p>LeetCode Problems</p>
             </div>
+            <div class="stat-card">
+              <h3>5+</h3>
+              <p>Projects</p>
+            </div>
+            <div class="stat-card">
+              <h3>2026</h3>
+              <p>Graduate</p>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <div class="quick-facts">
-        <div class="fact"><strong>600+</strong><span>LeetCode Problems Solved</span></div>
-        <div class="fact"><strong>5+</strong><span>Technical Projects</span></div>
-        <div class="fact"><strong>2026</strong><span>CSE Graduate</span></div>
-    </div>
-</section>
-
-<!-- SKILLS -->
-<section class="section-shell section-block" id="skills">
-    <div class="section-kicker">02 / TECHNICAL SKILLS</div>
-
-    <div class="section-heading reveal">
-        <div>
-            <p class="overline">MY TECHNICAL TOOLKIT</p>
-            <h2>Skills & <span class="gradient-text">Technologies.</span></h2>
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">WHAT I WORK WITH</p>
+          <h2>Technical <span>Skills</span></h2>
         </div>
-        <p class="section-note">
-            Programming, frontend development, software engineering,
-            backend technologies and AI/ML.
-        </p>
-    </div>
 
-    <div class="skills-grid">
-        <article class="skill-card reveal">
-            <div class="skill-icon">&lt;/&gt;</div>
+        <div class="skills-grid">
+          <article class="skill-card reveal">
             <h3>Programming Languages</h3>
-            <p>Writing efficient and structured code</p>
-            <div class="chips">
-                <span>Java</span><span>Python</span><span>C</span><span>SQL</span>
+            <div class="skill-tags">
+              <span>Java</span><span>Python</span><span>C</span><span>SQL</span>
             </div>
-        </article>
+          </article>
 
-        <article class="skill-card reveal">
-            <div class="skill-icon">◈</div>
-            <h3>Frontend Development</h3>
-            <p>Building responsive and interactive interfaces</p>
-            <div class="chips">
-                <span>HTML5</span><span>CSS3</span>
-                <span>JavaScript</span><span>React.js</span>
+          <article class="skill-card reveal">
+            <h3>Web Technologies</h3>
+            <div class="skill-tags">
+              <span>HTML5</span><span>CSS3</span>
+              <span>JavaScript</span><span>React.js</span>
             </div>
-        </article>
+          </article>
 
-        <article class="skill-card reveal">
-            <div class="skill-icon">⌘</div>
+          <article class="skill-card reveal">
             <h3>Backend Development</h3>
-            <p>Application logic and API development</p>
-            <div class="chips">
-                <span>FastAPI</span><span>Flask</span>
-                <span>REST APIs</span><span>Streamlit</span>
+            <div class="skill-tags">
+              <span>FastAPI</span><span>Flask</span>
+              <span>REST APIs</span><span>Streamlit</span>
             </div>
-        </article>
+          </article>
 
-        <article class="skill-card reveal">
-            <div class="skill-icon">▤</div>
-            <h3>Software Engineering</h3>
-            <p>Core concepts and development practices</p>
-            <div class="chips">
-                <span>OOP</span><span>DSA</span><span>DBMS</span>
-                <span>SDLC</span><span>Agile</span><span>Scrum</span>
+          <article class="skill-card reveal">
+            <h3>Computer Science</h3>
+            <div class="skill-tags">
+              <span>OOP</span><span>DSA</span><span>DBMS</span>
+              <span>SDLC</span><span>Agile</span><span>Scrum</span>
             </div>
-        </article>
+          </article>
 
-        <article class="skill-card reveal">
-            <div class="skill-icon">⚙</div>
-            <h3>Database & Tools</h3>
-            <p>Data management and development workflow</p>
-            <div class="chips">
-                <span>SQL</span><span>MySQL</span>
-                <span>Git</span><span>GitHub</span><span>VS Code</span>
+          <article class="skill-card reveal">
+            <h3>Databases & Tools</h3>
+            <div class="skill-tags">
+              <span>MySQL</span><span>Git</span>
+              <span>GitHub</span><span>VS Code</span>
             </div>
-        </article>
+          </article>
 
-        <article class="skill-card reveal">
-            <div class="skill-icon">✳</div>
-            <h3>AI, ML & Data Science</h3>
-            <p>Additional experience through technical projects</p>
-            <div class="chips">
-                <span>Machine Learning</span><span>Deep Learning</span>
-                <span>NLP</span><span>Scikit-learn</span>
-                <span>PyTorch</span><span>OpenCV</span>
-                <span>LLMs</span><span>RAG</span>
+          <article class="skill-card reveal">
+            <h3>AI & Machine Learning</h3>
+            <div class="skill-tags">
+              <span>Machine Learning</span><span>Deep Learning</span>
+              <span>NLP</span><span>Scikit-learn</span>
+              <span>PyTorch</span><span>OpenCV</span>
+              <span>LLMs</span><span>RAG</span>
             </div>
-        </article>
-    </div>
-</section>
-
-<!-- PROJECTS -->
-<section class="section-shell section-block" id="projects">
-    <div class="section-kicker">03 / PROJECTS</div>
-
-    <div class="section-heading reveal">
-        <div>
-            <p class="overline">SELECTED WORK</p>
-            <h2>Projects I've <span class="gradient-text">built.</span></h2>
+          </article>
         </div>
-        <p class="section-note">
-            Practical applications demonstrating programming,
-            problem-solving and technical implementation.
-        </p>
-    </div>
+      </div>
+    </section>
 
-    <div class="project-filters">
-        <button class="filter-btn active" data-filter="all">All Projects</button>
-        <button class="filter-btn" data-filter="application">Applications</button>
-        <button class="filter-btn" data-filter="ml">Machine Learning</button>
-        <button class="filter-btn" data-filter="nlp">NLP</button>
-        <button class="filter-btn" data-filter="data">Data Analytics</button>
-    </div>
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">MY RECENT WORK</p>
+          <h2>Featured <span>Projects</span></h2>
+        </div>
 
-    <div class="projects-grid">
-        <article class="project-card reveal" data-category="application">
-            <div class="project-top"><span>01 / APPLICATION DEVELOPMENT</span><span>✳</span></div>
+        <div class="project-filters reveal">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="software">Software</button>
+          <button class="filter-btn" data-filter="ai">AI / ML</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal" data-category="software">
+            <div class="project-number">01</div>
             <h3>AI Resume Analyzer</h3>
-            <p>Built a resume analysis application that evaluates uploaded resumes against target job roles and generates AI-powered feedback.</p>
-            <div class="project-tech">
-                <span>Python</span><span>Streamlit</span><span>Gemini API</span>
-            </div>
-            <a href="https://github.com/ArchanaPathepuram" target="_blank" rel="noopener noreferrer" class="project-link">View GitHub ↗</a>
-        </article>
+            <p class="project-stack">Python · Streamlit · Gemini API</p>
+            <p>
+              Built a resume analysis application that uses an AI
+              model to review uploaded resumes and provide feedback
+              based on a target job role.
+            </p>
+            <a href="https://github.com/ArchanaPathepuram"
+               target="_blank" rel="noopener noreferrer"
+               class="project-link">View on GitHub ↗</a>
+          </article>
 
-        <article class="project-card reveal" data-category="application">
-            <div class="project-top"><span>02 / APPLICATION DEVELOPMENT</span><span>⌘</span></div>
+          <article class="project-card reveal" data-category="ai">
+            <div class="project-number">02</div>
             <h3>Heart Disease Risk Assessment</h3>
-            <p>Developed a prediction application using a Decision Tree classification model and 13 clinical parameters.</p>
-            <div class="project-tech">
-                <span>Python</span><span>Scikit-learn</span><span>Streamlit</span>
-            </div>
-            <a href="https://github.com/ArchanaPathepuram/Heart_Disease" target="_blank" rel="noopener noreferrer" class="project-link">View Project ↗</a>
-        </article>
+            <p class="project-stack">Python · Scikit-learn · Streamlit</p>
+            <p>
+              Developed a Decision Tree classification model using
+              13 clinical parameters to predict potential heart
+              disease risk, achieving 90% accuracy.
+            </p>
+            <a href="https://github.com/ArchanaPathepuram/Heart_Disease"
+               target="_blank" rel="noopener noreferrer"
+               class="project-link">View on GitHub ↗</a>
+          </article>
 
-        <article class="project-card reveal" data-category="nlp">
-            <div class="project-top"><span>03 / NLP & DEEP LEARNING</span><span>⌁</span></div>
+          <article class="project-card reveal" data-category="ai">
+            <div class="project-number">03</div>
             <h3>NLP-Based Stress Detection</h3>
-            <p>Built a text classification model using NLP and BiLSTM to identify stress-related patterns in text.</p>
-            <div class="project-tech">
-                <span>Python</span><span>NLP</span><span>BiLSTM</span><span>TensorFlow</span>
-            </div>
-            <a href="https://github.com/ArchanaPathepuram/NLP_Based_Stress_Detection" target="_blank" rel="noopener noreferrer" class="project-link">View Project ↗</a>
-        </article>
+            <p class="project-stack">Python · NLP · Deep Learning</p>
+            <p>
+              Developed a text-based stress detection system using
+              NLP techniques and deep learning to identify stress
+              patterns in textual data.
+            </p>
+            <a href="https://github.com/ArchanaPathepuram/NLP_Based_Stress_Detection"
+               target="_blank" rel="noopener noreferrer"
+               class="project-link">View on GitHub ↗</a>
+          </article>
 
-        <article class="project-card reveal" data-category="ml">
-            <div class="project-top"><span>04 / MACHINE LEARNING</span><span>◉</span></div>
+          <article class="project-card reveal" data-category="ai">
+            <div class="project-number">04</div>
             <h3>Animal Classification</h3>
-            <p>Developed an image classification application to identify animal categories using machine learning.</p>
-            <div class="project-tech">
-                <span>Python</span><span>Scikit-learn</span><span>Streamlit</span>
-            </div>
-            <a href="https://github.com/ArchanaPathepuram/Animal_Classification_Machine_Learning" target="_blank" rel="noopener noreferrer" class="project-link">View Project ↗</a>
-        </article>
+            <p class="project-stack">Python · Machine Learning · Scikit-learn</p>
+            <p>
+              Created an animal classification application using
+              machine learning techniques to classify animal images.
+            </p>
+            <a href="https://github.com/ArchanaPathepuram/Animal_Classification_Machine_Learning"
+               target="_blank" rel="noopener noreferrer"
+               class="project-link">View on GitHub ↗</a>
+          </article>
 
-        <article class="project-card reveal" data-category="data">
-            <div class="project-top"><span>05 / DATA ANALYSIS</span><span>↗</span></div>
+          <article class="project-card reveal" data-category="ai">
+            <div class="project-number">05</div>
             <h3>Hybrid AI Stock Market Analysis</h3>
-            <p>Developed a stock market analysis project combining QINN, Transformer and GPT-2 approaches for market trend analysis.</p>
-            <div class="project-tech">
-                <span>Python</span><span>Transformer</span><span>GPT-2</span><span>QINN</span>
+            <p class="project-stack">Python · QINN · Transformer · GPT-2</p>
+            <p>
+              Developed a hybrid stock market analysis project
+              combining quantum-inspired neural networks and
+              Transformer-based techniques.
+            </p>
+            <a href="https://github.com/ArchanaPathepuram"
+               target="_blank" rel="noopener noreferrer"
+               class="project-link">View on GitHub ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section certifications-section" id="certifications">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">LEARNING & DEVELOPMENT</p>
+          <h2>Certifications & <span>Training</span></h2>
+        </div>
+
+        <div class="cert-list">
+          <article class="cert-item reveal">
+            <span class="cert-dot"></span>
+            <div>
+              <h3>GROW Tech – AI/ML Training</h3>
+              <p>Dr. Reddy's Foundation</p>
             </div>
-            <a href="https://github.com/ArchanaPathepuram/Hybdrid_Ai_StockMarket_Analysis_Qinn-Transformer" target="_blank" rel="noopener noreferrer" class="project-link">View Project ↗</a>
-        </article>
-    </div>
-</section>
+          </article>
 
-<!-- CERTIFICATIONS -->
-<section class="section-shell section-block" id="certifications">
-    <div class="section-kicker">04 / CERTIFICATIONS & ACHIEVEMENTS</div>
+          <article class="cert-item reveal">
+            <span class="cert-dot"></span>
+            <div>
+              <h3>AI/ML Internship</h3>
+              <p>AICTE</p>
+            </div>
+          </article>
 
-    <div class="section-heading reveal">
-        <div>
-            <p class="overline">LEARNING & DEVELOPMENT</p>
-            <h2>Growing through <span class="gradient-text">learning.</span></h2>
+          <article class="cert-item reveal">
+            <span class="cert-dot"></span>
+            <div>
+              <h3>Python Internship</h3>
+              <p>E-Code Learning Software Services</p>
+            </div>
+          </article>
+
+          <article class="cert-item reveal">
+            <span class="cert-dot"></span>
+            <div>
+              <h3>Data Analytics</h3>
+              <p>Cisco</p>
+            </div>
+          </article>
+
+          <article class="cert-item reveal">
+            <span class="cert-dot"></span>
+            <div>
+              <h3>Python Essentials 1 & 2</h3>
+              <p>Cisco</p>
+            </div>
+          </article>
+
+          <article class="cert-item reveal">
+            <span class="cert-dot"></span>
+            <div>
+              <h3>ServiceNow Micro-Certification</h3>
+              <p>ServiceNow</p>
+            </div>
+          </article>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <div class="cert-grid">
-        <article class="cert-card reveal">
-            <span class="cert-index">01</span>
-            <div><h3>AI/ML Training</h3><p>Dr. Reddy's Foundation - GROW Tech</p></div>
-        </article>
-        <article class="cert-card reveal">
-            <span class="cert-index">02</span>
-            <div><h3>AI/ML Internship</h3><p>AICTE Internship</p></div>
-        </article>
-        <article class="cert-card reveal">
-            <span class="cert-index">03</span>
-            <div><h3>Python Internship</h3><p>E-Code Learning Software Services</p></div>
-        </article>
-        <article class="cert-card reveal">
-            <span class="cert-index">04</span>
-            <div><h3>Data Analytics</h3><p>Cisco Networking Academy</p></div>
-        </article>
-        <article class="cert-card reveal">
-            <span class="cert-index">05</span>
-            <div><h3>Python Essentials 1 & 2</h3><p>Cisco Networking Academy</p></div>
-        </article>
-        <article class="cert-card reveal">
-            <span class="cert-index">06</span>
-            <div><h3>ServiceNow Micro-Certification</h3><p>ServiceNow</p></div>
-        </article>
-    </div>
-
-    <div class="achievement-strip reveal">
-        <span class="achievement-symbol">✦</span>
-        <p>
-            <strong>600+ LeetCode Problems Solved</strong><br>
-            Practicing data structures, algorithms and problem-solving consistently.
-        </p>
-        <a href="https://leetcode.com/" target="_blank" rel="noopener noreferrer">LeetCode ↗</a>
-    </div>
-</section>
-
-<!-- CONTACT -->
-<section class="section-shell section-block" id="contact">
-    <div class="section-kicker">05 / CONTACT</div>
-
-    <div class="contact-panel reveal">
-        <p class="overline">LET'S CONNECT</p>
-        <h2>Ready for the next<br><span class="gradient-text">opportunity.</span></h2>
-        <p>
-            I'm looking for entry-level opportunities in Software
-            Engineering, Software Development and related technical roles.
-            Let's connect and build something meaningful.
-        </p>
-        <a href="mailto:archanapathepuram@gmail.com" class="button button-primary">Get in Touch ↗</a>
-
-        <div class="contact-socials">
-            <a href="https://www.linkedin.com/in/archana-pathepuram/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-            <a href="https://github.com/ArchanaPathepuram" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-            <a href="mailto:archanapathepuram@gmail.com">Email ↗</a>
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">LET'S CONNECT</p>
+          <h2>Contact <span>Me</span></h2>
         </div>
-    </div>
-</section>
 
-</main>
+        <div class="contact-content reveal">
+          <p>
+            I am open to opportunities in software development
+            and related technical roles. Feel free to connect with me.
+          </p>
+          <a href="mailto:archanapathepuram@gmail.com"
+             class="btn btn-primary">Send Me an Email</a>
 
-<footer class="footer section-shell">
-    <a class="brand" href="#home">AP<span>.</span></a>
-    <p>Designed & Built by Archana Pathepuram © <span id="year"></span></p>
-    <a href="#home">Back to top ↑</a>
-</footer>
+          <div class="contact-links">
+            <a href="mailto:archanapathepuram@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/archana-pathepuram/"
+               target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/ArchanaPathepuram"
+               target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="current-year"></span> Archana Pathepuram. All rights reserved.</p>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
 
 </body>
 </html>
