@@ -21,12 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         function typeEffect() {
             const currentRole = roles[roleIndex];
 
-            if (deleting) {
-                charIndex--;
-            } else {
-                charIndex++;
-            }
-
+            charIndex += deleting ? -1 : 1;
             typedRole.textContent = currentRole.substring(0, charIndex);
 
             let speed = deleting ? 55 : 100;
@@ -53,26 +48,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.getElementById("navLinks");
 
     if (menuToggle && navLinks) {
-
         menuToggle.addEventListener("click", function () {
-
             const isOpen = navLinks.classList.toggle("open");
 
             menuToggle.setAttribute("aria-expanded", isOpen);
             menuToggle.textContent = isOpen ? "✕" : "☰";
-
         });
 
         navLinks.querySelectorAll("a").forEach(function (link) {
-
             link.addEventListener("click", function () {
-
                 navLinks.classList.remove("open");
                 menuToggle.setAttribute("aria-expanded", "false");
                 menuToggle.textContent = "☰";
-
             });
-
         });
     }
 
@@ -83,9 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const projectCards = document.querySelectorAll(".project-card");
 
     filterButtons.forEach(function (button) {
-
         button.addEventListener("click", function () {
-
             const selectedFilter = button.getAttribute("data-filter");
 
             filterButtons.forEach(function (btn) {
@@ -95,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
             button.classList.add("active");
 
             projectCards.forEach(function (card) {
-
                 const category = card.getAttribute("data-category");
 
                 if (selectedFilter === "all" || category === selectedFilter) {
@@ -103,11 +88,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 } else {
                     card.classList.add("hide");
                 }
-
             });
-
         });
-
     });
 
 
@@ -116,18 +98,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const revealElements = document.querySelectorAll(".reveal");
 
     if ("IntersectionObserver" in window) {
-
         const revealObserver = new IntersectionObserver(function (entries) {
-
             entries.forEach(function (entry) {
-
                 if (entry.isIntersecting) {
                     entry.target.classList.add("visible");
                     revealObserver.unobserve(entry.target);
                 }
-
             });
-
         }, {
             threshold: 0.12
         });
@@ -135,13 +112,10 @@ document.addEventListener("DOMContentLoaded", function () {
         revealElements.forEach(function (element) {
             revealObserver.observe(element);
         });
-
     } else {
-
         revealElements.forEach(function (element) {
             element.classList.add("visible");
         });
-
     }
 
 
@@ -151,29 +125,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const navigationLinks = document.querySelectorAll(".nav-links a");
 
     function updateActiveNavigation() {
-
         let currentSection = "home";
 
         sections.forEach(function (section) {
-
             const sectionTop = section.offsetTop - 150;
 
             if (window.scrollY >= sectionTop) {
                 currentSection = section.getAttribute("id");
             }
-
         });
 
         navigationLinks.forEach(function (link) {
-
             link.classList.remove("active");
 
             if (link.getAttribute("href") === "#" + currentSection) {
                 link.classList.add("active");
             }
-
         });
-
     }
 
     window.addEventListener("scroll", updateActiveNavigation);
@@ -189,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // 7. CONSOLE MESSAGE
+    // 7. CONFIRM JAVASCRIPT CONNECTION
 
     console.log("Portfolio JavaScript loaded successfully!");
 
