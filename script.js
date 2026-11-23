@@ -1,243 +1,196 @@
 
-// ======================================
-// 1. TYPING ANIMATION
-// ======================================
+document.addEventListener("DOMContentLoaded", function () {
 
-const roles = [
-    "Software Engineer",
-    "Software Developer",
-    "Python Developer",
-    "Backend Developer",
-    "Web Developer",
-    "AI/ML Enthusiast"
-];
+    // 1. TYPING ANIMATION
 
-const typedRole = document.getElementById("typedRole");
+    const typedRole = document.getElementById("typedRole");
 
-let roleIndex = 0;
-let charIndex = 0;
-let deleting = false;
+    if (typedRole) {
+        const roles = [
+            "Software Engineer",
+            "Software Developer",
+            "Python Developer",
+            "Frontend Developer",
+            "Problem Solver"
+        ];
 
-function typeRole() {
+        let roleIndex = 0;
+        let charIndex = 0;
+        let deleting = false;
 
-    if (!typedRole) return;
+        function typeEffect() {
+            const currentRole = roles[roleIndex];
 
-    const currentRole = roles[roleIndex];
+            if (deleting) {
+                charIndex--;
+            } else {
+                charIndex++;
+            }
 
-    typedRole.textContent = currentRole.substring(0, charIndex);
+            typedRole.textContent = currentRole.substring(0, charIndex);
 
-    if (!deleting && charIndex < currentRole.length) {
+            let speed = deleting ? 55 : 100;
 
-        charIndex++;
-        setTimeout(typeRole, 85);
+            if (!deleting && charIndex === currentRole.length) {
+                deleting = true;
+                speed = 1300;
+            } else if (deleting && charIndex === 0) {
+                deleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                speed = 400;
+            }
 
-    } else if (!deleting) {
+            setTimeout(typeEffect, speed);
+        }
 
-        deleting = true;
-        setTimeout(typeRole, 1200);
+        typeEffect();
+    }
 
-    } else if (charIndex > 0) {
 
-        charIndex--;
-        setTimeout(typeRole, 40);
+    // 2. MOBILE NAVIGATION
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    if (menuToggle && navLinks) {
+
+        menuToggle.addEventListener("click", function () {
+
+            const isOpen = navLinks.classList.toggle("open");
+
+            menuToggle.setAttribute("aria-expanded", isOpen);
+            menuToggle.textContent = isOpen ? "✕" : "☰";
+
+        });
+
+        navLinks.querySelectorAll("a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                navLinks.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.textContent = "☰";
+
+            });
+
+        });
+    }
+
+
+    // 3. PROJECT FILTERING
+
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const projectCards = document.querySelectorAll(".project-card");
+
+    filterButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            const selectedFilter = button.getAttribute("data-filter");
+
+            filterButtons.forEach(function (btn) {
+                btn.classList.remove("active");
+            });
+
+            button.classList.add("active");
+
+            projectCards.forEach(function (card) {
+
+                const category = card.getAttribute("data-category");
+
+                if (selectedFilter === "all" || category === selectedFilter) {
+                    card.classList.remove("hide");
+                } else {
+                    card.classList.add("hide");
+                }
+
+            });
+
+        });
+
+    });
+
+
+    // 4. SCROLL REVEAL ANIMATION
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+
+        const revealObserver = new IntersectionObserver(function (entries) {
+
+            entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    revealObserver.unobserve(entry.target);
+                }
+
+            });
+
+        }, {
+            threshold: 0.12
+        });
+
+        revealElements.forEach(function (element) {
+            revealObserver.observe(element);
+        });
 
     } else {
 
-        deleting = false;
-        roleIndex = (roleIndex + 1) % roles.length;
+        revealElements.forEach(function (element) {
+            element.classList.add("visible");
+        });
 
-        setTimeout(typeRole, 250);
     }
-}
 
 
-// ======================================
-// 2. MOBILE NAVIGATION
-// ======================================
+    // 5. ACTIVE NAVIGATION ON SCROLL
 
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
+    const sections = document.querySelectorAll("main section[id]");
+    const navigationLinks = document.querySelectorAll(".nav-links a");
 
-if (menuToggle && navLinks) {
+    function updateActiveNavigation() {
 
-    menuToggle.addEventListener("click", () => {
+        let currentSection = "home";
 
-        const isOpen = navLinks.classList.toggle("open");
+        sections.forEach(function (section) {
 
-        menuToggle.setAttribute(
-            "aria-expanded",
-            String(isOpen)
-        );
+            const sectionTop = section.offsetTop - 150;
 
-    });
-
-    navLinks.querySelectorAll("a").forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            navLinks.classList.remove("open");
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-        });
-
-    });
-}
-
-
-// ======================================
-// 3. PROJECT FILTERING
-// ======================================
-
-const filterButtons = document.querySelectorAll(".filter-btn");
-const projectCards = document.querySelectorAll(".project-card");
-
-filterButtons.forEach(button => {
-
-    button.addEventListener("click", () => {
-
-        const filter = button.dataset.filter;
-
-        filterButtons.forEach(btn => {
-            btn.classList.remove("active");
-        });
-
-        button.classList.add("active");
-
-        projectCards.forEach(card => {
-
-            const category = card.dataset.category;
-
-            if (filter === "all" || filter === category) {
-
-                card.hidden = false;
-
-            } else {
-
-                card.hidden = true;
-
+            if (window.scrollY >= sectionTop) {
+                currentSection = section.getAttribute("id");
             }
 
         });
 
-    });
+        navigationLinks.forEach(function (link) {
 
-});
+            link.classList.remove("active");
 
+            if (link.getAttribute("href") === "#" + currentSection) {
+                link.classList.add("active");
+            }
 
-// ======================================
-// 4. SCROLL REVEAL ANIMATION
-// ======================================
+        });
 
-const revealElements = document.querySelectorAll(".reveal");
+    }
 
-if ("IntersectionObserver" in window) {
-
-    const revealObserver = new IntersectionObserver(
-        (entries, observer) => {
-
-            entries.forEach(entry => {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.classList.add("visible");
-
-                    observer.unobserve(entry.target);
-
-                }
-
-            });
-
-        },
-        {
-            threshold: 0.12
-        }
-    );
-
-    revealElements.forEach(element => {
-        revealObserver.observe(element);
-    });
-
-} else {
-
-    revealElements.forEach(element => {
-        element.classList.add("visible");
-    });
-
-}
+    window.addEventListener("scroll", updateActiveNavigation);
+    updateActiveNavigation();
 
 
-// ======================================
-// 5. ACTIVE NAVIGATION ON SCROLL
-// ======================================
+    // 6. AUTOMATIC FOOTER YEAR
 
-const sections = document.querySelectorAll("main section[id]");
-const navItems = document.querySelectorAll(".nav-links a");
+    const yearElement = document.getElementById("year");
 
-if ("IntersectionObserver" in window) {
-
-    const sectionObserver = new IntersectionObserver(
-
-        entries => {
-
-            entries.forEach(entry => {
-
-                if (entry.isIntersecting) {
-
-                    navItems.forEach(link => {
-
-                        const isActive =
-                            link.getAttribute("href") ===
-                            "#" + entry.target.id;
-
-                        link.classList.toggle(
-                            "active",
-                            isActive
-                        );
-
-                    });
-
-                }
-
-            });
-
-        },
-
-        {
-            rootMargin: "-35% 0px -55% 0px"
-        }
-
-    );
-
-    sections.forEach(section => {
-        sectionObserver.observe(section);
-    });
-
-}
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
 
 
-// ======================================
-// 6. AUTOMATIC FOOTER YEAR
-// ======================================
+    // 7. CONSOLE MESSAGE
 
-const yearElement = document.getElementById("year");
-
-if (yearElement) {
-
-    yearElement.textContent = new Date().getFullYear();
-
-}
-
-
-// ======================================
-// 7. START ANIMATIONS
-// ======================================
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    typeRole();
+    console.log("Portfolio JavaScript loaded successfully!");
 
 });
